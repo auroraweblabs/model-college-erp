@@ -393,7 +393,6 @@ def manage_student(request):
 def edit_student(request, student_id):
     # Adding Student ID into Session Variable
     request.session['student_id'] = student_id
-
     student = Students.objects.get(admin=student_id)
     form = EditStudentForm()
     # Filling the form with Data from Database

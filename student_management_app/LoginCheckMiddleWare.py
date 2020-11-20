@@ -39,8 +39,8 @@ class LoginCheckMiddleWare(MiddlewareMixin):
             else:
                 return redirect("login")
 
-        else:
+        '''else:
             if request.path == reverse("login") or request.path == reverse("doLogin"):
                 pass
             else:
-                return redirect("login")
+                return redirect("login")'''

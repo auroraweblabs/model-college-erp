@@ -38,12 +38,6 @@ def doLogin(request):
             else:
                 messages.error(request, "Invalid Login!")
                 return redirect('login')
-        else:
-            messages.error(request, "Invalid Login Credentials!")
-            #return HttpResponseRedirect("/")
-            return redirect('login')
-
-
 
 def get_user_details(request):
     if request.user != None:
@@ -51,10 +45,6 @@ def get_user_details(request):
     else:
         return HttpResponse("Please Login First")
 
-
-
 def logout_user(request):
     logout(request)
-    return HttpResponseRedirect('/')
-
-
+    return HttpResponseRedirect('/login')

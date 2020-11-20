@@ -48,8 +48,6 @@ class AddStudentForm(forms.Form):
     # session_end_year = forms.DateField(label="Session End", widget=DateInput(attrs={"class":"form-control"}))
     profile_pic = forms.FileField(label="Profile Pic", required=False, widget=forms.FileInput(attrs={"class":"form-control"}))
 
-
-
 class EditStudentForm(forms.Form):
     email = forms.EmailField(label="Email", max_length=50, widget=forms.EmailInput(attrs={"class":"form-control"}))
     first_name = forms.CharField(label="First Name", max_length=50, widget=forms.TextInput(attrs={"class":"form-control"}))

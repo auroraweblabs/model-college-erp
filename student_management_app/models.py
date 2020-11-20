@@ -141,8 +141,7 @@ class StudentResult(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     objects = models.Manager()
 
-#Creating Django Signals
-
+#Django Signals
 # It's like trigger in database. It will run only when Data is Added in CustomUser model
 
 @receiver(post_save, sender=CustomUser)
